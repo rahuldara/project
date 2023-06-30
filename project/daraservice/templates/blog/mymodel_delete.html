@@ -1,0 +1,15 @@
+<!-- mymodel_confirm_delete.html -->
+
+<h1>Delete My Model</h1>
+
+<p>Are you sure you want to delete the following object?</p>
+
+
+<p><strong>Field 1:</strong> {{ PostModel.field1 }}</p>
+<p><strong>Field 2:</strong> {{ PostModel.field2 }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+    <a href="{% url 'user-login' %}">Cancel</a>
+</form>
